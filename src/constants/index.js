@@ -7,41 +7,19 @@ import {
     wiping,
     breakroom,
     restock,
-
-    mobile,
-    backend,
-    creator,
-    web,
-    javascript,
-    typescript,
-    html,
-    css,
-    cplusplus,
-    java,
-    emailjs,
-    csharp,
-    reactjs,
-    redux,
-    tailwind,
-    nodejs,
-    mongodb,
-    git,
-    figma,
-    docker,
-    meta,
-    starbucks,
     glowup,
     nationaluniversity,
-    tesla,
-    shopify,
-    carrent,
     glowupecommerce,
-    glowupecommerceresize,
     washingmachineuml,
-    jobit,
-    tripguide,
-    threejs,
+
   } from "../assets";
+  
+  export const contactLink = [
+    {
+      id: "contact",
+      title: "Contact Us",
+    },
+  ];
   
   export const navLinks = [
     {
@@ -51,10 +29,6 @@ import {
     {
       id: "work",
       title: "Work",
-    },
-    {
-      id: "services",
-      title: "Services",
     },
     {
       id: "contact",
@@ -105,57 +79,6 @@ import {
       icon: creator,
     },
     */
-  ];
-  
-  const technologies = [
-    {
-      name: "HTML 5",
-      icon: html,
-    },
-    {
-      name: "CSS 3",
-      icon: css,
-    },
-    {
-      name: "JavaScript",
-      icon: javascript,
-    },
-    {
-      name: "TypeScript",
-      icon: typescript,
-    },
-    {
-      name: "React JS",
-      icon: reactjs,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
-    },
-    {
-      name: "java",
-      icon: java,
-    },
-    {
-      name: "emailjs",
-      icon: emailjs,
-    },
-    {
-      name: "Three JS",
-      icon: threejs,
-    },
-    {
-      name: "git",
-      icon: git,
-    },
-    {
-      name: "cplusplus",
-      icon: cplusplus,
-    },
-    {
-      name: "csharp",
-      icon: csharp,
-    },
   ];
   
   const experiences = [
@@ -308,4 +231,4 @@ import {
     },
   ];
   
-  export { services, technologies, experiences, education, testimonials, projects };
+  export { services, experiences, education, testimonials, projects };

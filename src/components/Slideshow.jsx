@@ -1,12 +1,11 @@
-import React from "react";
+import React from 'react';
+import ImageSlider from "./ImageSlider";
 import { motion } from "framer-motion";
+import { fadeIn, textVariant } from "../utils/motion";
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
-import { testimonials } from "../constants";
 
-import ImageSlider from "./ImageSlider";
 import {
   office1,
   office2,
@@ -18,8 +17,7 @@ import {
   office8,
 } from "../assets";
 
-
-const Experience = () => {
+const Slideshow = () => {
   const slides = [
     { url: office1, title: "beach" },
     { url: office2, title: "boat" },
@@ -36,22 +34,31 @@ const Experience = () => {
     margin: "0 auto",
   };
   return (
+
     <div className={`mt-12 bg-black-100 rounded-[20px]`}>
       <div
         className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
       >
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>What We Have Done So Far</p>
-          <h2 className={styles.sectionHeadText}>Work Experience.</h2>
+          <p className={styles.sectionSubText}>What others say</p>
+          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
         </motion.div>
       </div>
       <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+        
+      </div>
+    </div>
+    
+
+  );
+};
+
+/**
+ * <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
         <div style={containerStyles}>
           <ImageSlider slides={slides} parentWidth={500}/>
         </div>
       </div>
-    </div>
-  );
-};
+ */
 
-export default SectionWrapper(Experience, "");
+export default SectionWrapper(Slideshow, "");

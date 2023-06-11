@@ -1,6 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
+import { About, Banner, Contact, Experience, Slideshow, Feedbacks, Hero, Navbar, Works, StarsCanvas } from "./components";
+import { bannerStyle } from "./styles";
 
 //background color #409AEF
 
@@ -15,8 +16,10 @@ const App = () => {
           <Hero />
         </div>
         <About />
-        <Experience />
-        <Tech />
+        <div className='bg-banner-pattern'>
+          <Banner />
+        </div>
+        <Experience />a
         <Works />
         <Feedbacks />
         <div className='relative z-0'>

@@ -49,6 +49,15 @@ import washingmachineuml from "./washingmachineuml.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import office1 from "./office1.png";
+import office2 from "./office2.png";
+import office3 from "./office3.png";
+import office4 from "./office4.png";
+import office5 from "./office5.png";
+import office6 from "./office6.png";
+import office7 from "./office7.png";
+import office8 from "./office8.png";
+
 export {
   bathroom,
   duster,
@@ -95,4 +104,12 @@ export {
   washingmachineuml,
   jobit,
   tripguide,
+  office1,
+  office2,
+  office3,
+  office4,
+  office5,
+  office6,
+  office7,
+  office8,  
 };
