@@ -16,6 +16,12 @@ import {
   office6,
   office7,
   office8,
+  office9,
+  office10,
+  office11,
+  office12,
+  office13,
+  office14,
 } from "../assets";
 
 
@@ -29,6 +35,12 @@ const Experience = () => {
     { url: office6, title: "italy" },
     { url: office7, title: "italy" },
     { url: office8, title: "italy" },
+    { url: office9, title: "city" },
+    { url: office10, title: "italy" },
+    { url: office11, title: "italy" },
+    { url: office12, title: "italy" },
+    { url: office13, title: "italy" },
+    { url: office14, title: "italy" },
   ];
   const containerStyles = {
     width: "500px",
@@ -44,13 +56,20 @@ const Experience = () => {
           <p className={styles.sectionSubText}>What We Have Done So Far</p>
           <h2 className={styles.sectionHeadText}>Work Experience.</h2>
         </motion.div>
+
+        
+
       </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+
+      <div className={`-mt-25 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
         <div style={containerStyles}>
           <ImageSlider slides={slides} parentWidth={500}/>
         </div>
       </div>
     </div>
+
+    
+
   );
 };
 

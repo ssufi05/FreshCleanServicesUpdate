@@ -11,6 +11,7 @@ import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 import Contact from './Contact';
+import { Button } from "./Button";
 
 const Banner = () => {
   const [active, setActive] = useState('');
@@ -23,7 +24,27 @@ const Banner = () => {
     <section style={bannerStyle}>
           <h4 style={{ color: '#fff', fontSize: '16px'}}>Get a Quote Today</h4>
           <h2 style={{ color: '#fff', fontSize: '30px', padding: '10px 0'}}>Call (219) 413-8661 for a Free Quote!</h2>
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+          <a href="#contact">
+          <Button
+            className='btns'
+            buttonStyle='btn--outline'
+            buttonSize='btn--large'
+          >
+            Contact Us
+          </Button>
+        </a>
+    </section>
+  )
+}
+
+
+
+export default SectionWrapper(Banner, "")
+
+
+/*
+
+<ul className='list-none hidden sm:flex flex-row gap-10'>
           {contactLink.map((contact) => (
             <li
               key={contact.id}
@@ -34,10 +55,18 @@ const Banner = () => {
             </li>
           ))}
         </ul>
-    </section>
-  )
-}
 
 
 
-export default SectionWrapper(Banner, "")
+
+<a href="#about">
+          <Button
+            className='btns'
+            buttonStyle='btn--outline'
+            buttonSize='btn--large'
+          >
+            GET STARTED
+          </Button>
+        </a>
+
+*/

@@ -1,0 +1,8 @@
+Model Information:
+* title:	macOS Mail icon
+* source:	https://sketchfab.com/3d-models/macos-mail-icon-1bedc1f0ab7345c4b2a6174602e8ead7
+* author:	stPixel (https://sketchfab.com/innasparrow)
+
+Model License:
+* license type:	SKETCHFAB Editorial (https://sketchfab.com/licenses)
+* requirements:	Use only in connection with events that are newsworthy or of public interest

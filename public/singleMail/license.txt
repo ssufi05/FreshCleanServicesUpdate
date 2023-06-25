@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mail_Logo
+* source:	https://sketchfab.com/3d-models/mail-logo-36aa864c7d4a496e988de99003e636b1
+* author:	ssufi05 (https://sketchfab.com/ssufi05)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mail_Logo" (https://sketchfab.com/3d-models/mail-logo-36aa864c7d4a496e988de99003e636b1) by ssufi05 (https://sketchfab.com/ssufi05) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

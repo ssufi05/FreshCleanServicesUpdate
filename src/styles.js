@@ -28,6 +28,18 @@ const styles = {
 
   }
 
+  const  navbar = {
+    backgroundColor: "#3d8fdb",
+    height: "80px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    fontSize: "1.2rem",
+    position: "sticky",
+    top: "0",
+    zIndex: "999",
+  }
+
   const bannerButton = {
     fontSize: '14px',
     fontWeight: '600',
