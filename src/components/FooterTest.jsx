@@ -4,6 +4,10 @@ import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import { logo } from '../assets';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarker, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faInstagram, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+
 function FooterTest() {
   return (
     <body>
@@ -13,25 +17,61 @@ function FooterTest() {
 
       <footer className="footer-distributed">
         <div className="footer-left">
-          <h3>Sagar <span>Developer</span></h3>
+          <h3>
+            <Link
+              to='/'
+              className='flex items-center '
+              onClick={() => {
+                setActive("");
+                window.scrollTo(0, 0);
+              }}
+            >
+              <img src={logo} alt='logo' className='w-13 h-12 ' /> &nbsp;
+              <p className='text-white text-[18px] font-bold cursor-pointer flex '>
+
+                Fresh & Clean Services &nbsp;
+              </p>
+            </Link>
+          </h3>
+          
 
           <p className="footer links">
-            <a href="#">Home</a>
+            <a href="#">Home </a>
+            | 
+            <a href="#about"> About </a>
             |
-            <a href="#">About</a>
+            <a href="#work"> Work </a>
             |
-            <a href="#">Contact</a>
-            |
-            <a href="#">Blog</a>
+            <a href="#contact"> Contact </a>
           </p>
 
-          <p className="footer-company-name">Copyright © 2023 <strong>SagarDeveloper</strong>
+          <p className="footer-company-name">Copyright © 2023 <strong>Fresh & Clean Services LLC </strong>
           All rights reserved</p>
         </div>
 
         <div className="footer-center">
           <div>
-            <i class="fa fa-map-marker"></i>
+            <FontAwesomeIcon icon={faPhone}/> &nbsp;
+            <p> (219) 413-8661</p>
+          </div>
+          <div>
+            <FontAwesomeIcon icon={faEnvelope}/> &nbsp;
+            <p><a href="#">rakeen@freshandcleanservicesllc.com</a></p>
+          </div>
+        </div>
+
+        <div className="footer-right">
+          <p className="footer-company-about">
+            <span>About the company</span>
+            <strong>Fresh & Clean Services</strong> is a conscientious, 
+            cleaning company whose goal is to please; serving Northwest Indiana and the Chicagoland Area.
+          </p>
+          <div className="footer-icons">
+            <a href="#" onClick={() => {window.scrollTo(0, 0)}}><FontAwesomeIcon icon={faFacebook} /></a>
+            <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
+            <a href="#"><FontAwesomeIcon icon={faLinkedin} /></a>
+            <a href="#"><FontAwesomeIcon icon={faTwitter} /></a>
+            <a href="#"><FontAwesomeIcon icon={faYoutube} /></a>
           </div>
         </div>
       </footer>
