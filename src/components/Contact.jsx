@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
-import { EarthCanvas, MailCanvas } from "./canvas";
+import { MailCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
@@ -13,6 +13,7 @@ const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
+    phone: "",
     email: "",
     message: "",
   });
@@ -35,16 +36,17 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_hyhsuz6',
-        'template_hjd762j',
+        'service_p01ht27',
+        'template_wxhxcsn',
         {
-          from_name: form.name,
-          to_name: "Saadaq Sufi",
-          from_email: form.email,
-          to_email: "saadaq.sufi05@gmail.com",
+          name: form.name,
+          to_name: "Fresh & Clean Services",
+          phone: form.phone,
+          email: form.email,
+          to_email: "lorenzo@fresh-n-cleanservices.com",
           message: form.message,
         },
-        'C41-PHUEt9ImqTvtR'
+        'hggduQOzyu9_OMws3'
       )
       .then(
         () => {
@@ -53,6 +55,7 @@ const Contact = () => {
 
           setForm({
             name: "",
+            phone: "",
             email: "",
             message: "",
           });
@@ -89,7 +92,18 @@ const Contact = () => {
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your good name?"
+              placeholder="What's your name?"
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+            />
+          </label>
+          <label className='flex flex-col'>
+            <span className='text-white font-medium mb-4'>Your Phone Number</span>
+            <input
+              type='phone'
+              name='phone'
+              value={form.phone}
+              onChange={handleChange}
+              placeholder="What's your phone number?"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>

@@ -1,14 +1,19 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React, { Fragment } from "react";
+import Media from "react-media";
 
-import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
-import { testimonials } from "../constants";
+import { styles } from "../styles";
+import { textVariant } from "../utils/motion";
+import './Experience.css';
 
-import ImageSlider from "./ImageSlider";
 import {
   office1,
+  office10,
+  office11,
+  office12,
+  office13,
+  office14,
   office2,
   office3,
   office4,
@@ -17,13 +22,8 @@ import {
   office7,
   office8,
   office9,
-  office10,
-  office11,
-  office12,
-  office13,
-  office14,
 } from "../assets";
-
+import ImageSlider from "./ImageSlider";
 
 const Experience = () => {
   const slides = [
@@ -42,18 +42,22 @@ const Experience = () => {
     { url: office13, title: "italy" },
     { url: office14, title: "italy" },
   ];
+  //media width 500 x 280px
+
   const containerStyles = {
-    width: "500px",
+    width: "500",
     height: "280px",
     margin: "0 auto",
   };
+
   return (
     <div className={`mt-12 bg-black-100 rounded-[20px]`}>
+      
       <div
-        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
+        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[200px]`}
       >
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>What We Have Done So Far</p>
+          <p className={styles.sectionSubText}>Curriculum Vitae</p>
           <h2 className={styles.sectionHeadText}>Work Experience.</h2>
         </motion.div>
 
@@ -62,8 +66,20 @@ const Experience = () => {
       </div>
 
       <div className={`-mt-25 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
-        <div style={containerStyles}>
-          <ImageSlider slides={slides} parentWidth={500}/>
+        <div className="containerStyles">
+          <Media queries={{
+            mobile: "(max-width: 960px)",
+            notMobile: "(min-width: 961px)"
+          }}>
+            {matches => (
+              <Fragment>
+                {matches.mobile && <ImageSlider slides={slides} parentWidth={300}/>}
+                {matches.notMobile && <ImageSlider slides={slides} parentWidth={500}/>}
+              </Fragment>
+            )}
+
+          </Media>
+
         </div>
       </div>
     </div>
@@ -73,4 +89,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, "");
+export default SectionWrapper(Experience, "work");

@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 
-import { About, Banner, Contact, Experience, Feedbacks, Hero, Navbar, NewNavbar, Work, Works, StarsCanvas, FooterTest, HeroSection, } from "./components";
+import { About, Banner, Contact, Experience, Feedbacks, NavbarTest, Work, StarsCanvas, FooterTest, HeroSection, } from "./components";
 
 //background color #409AEF
 
@@ -11,7 +11,7 @@ const App = () => {
     <BrowserRouter>
       <div className='relative z-0 bg-primary'>
         <div className=' bg-cover bg-no-repeat bg-center'>
-          <Navbar />
+          <NavbarTest />
           <HeroSection />
         </div>
         <About />

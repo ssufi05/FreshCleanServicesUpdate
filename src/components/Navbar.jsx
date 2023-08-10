@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import './Navbar.css';
-import { Button } from './Button';
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { logo } from "../assets";
 
 
 
@@ -31,6 +30,12 @@ function Navbar() {
     }
   };
 
+  useEffect(() => {
+    
+    showButton();
+  }, []);
+
+  window.addEventListener('resize', showButton);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,13 +53,6 @@ function Navbar() {
   }, []);
 
 
-  useEffect(() => {
-    
-    showButton();
-  }, []);
-
-  window.addEventListener('resize', showButton);
-
   return (
     <>
           <nav
@@ -68,14 +66,11 @@ function Navbar() {
         <Link
           to='/'
           className='flex items-center gap-2'
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
+          onClick={closeMobileMenu}
         >
           <img src={logo} alt='logo' className='w-13 h-12 object-contain' /> &nbsp;
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-
+            
             Fresh & Clean Services &nbsp;
           </p>
         </Link>

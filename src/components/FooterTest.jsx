@@ -1,19 +1,62 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './FooterTest.css';
-import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import { logo } from '../assets';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarker, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faInstagram, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 function FooterTest() {
+
+
+  const [active, setActive] = useState('');
+  const [toggle, setToggle] = useState(false);
+
+  const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
+
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
+  useEffect(() => {
+    
+    showButton();
+  }, []);
+
+  window.addEventListener('resize', showButton);
+
+
+
+
   return (
     <body>
-      <header>
-        <h2>Responsive <span>Footer</span></h2>
-      </header>
 
       <footer className="footer-distributed">
         <div className="footer-left">
@@ -56,7 +99,7 @@ function FooterTest() {
           </div>
           <div>
             <FontAwesomeIcon icon={faEnvelope}/> &nbsp;
-            <p><a href="#">rakeen@freshandcleanservicesllc.com</a></p>
+            <p><p>lorenzo@fresh-n-cleanservices.com</p></p>
           </div>
         </div>
 
@@ -67,11 +110,8 @@ function FooterTest() {
             cleaning company whose goal is to please; serving Northwest Indiana and the Chicagoland Area.
           </p>
           <div className="footer-icons">
-            <a href="#" onClick={() => {window.scrollTo(0, 0)}}><FontAwesomeIcon icon={faFacebook} /></a>
-            <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
-            <a href="#"><FontAwesomeIcon icon={faLinkedin} /></a>
-            <a href="#"><FontAwesomeIcon icon={faTwitter} /></a>
-            <a href="#"><FontAwesomeIcon icon={faYoutube} /></a>
+            <a href="https://www.instagram.com/fresh__clean__services/" target="_blank"><FontAwesomeIcon icon={faInstagram} /></a>
+            <a href="https://www.linkedin.com/company/fresh-clean-services-llc/about/" target="_blank"><FontAwesomeIcon icon={faLinkedin} /></a>
           </div>
         </div>
       </footer>
@@ -80,116 +120,3 @@ function FooterTest() {
 }
 
 export default FooterTest;
-
-
-
-/**
- * import React from 'react';
-import './FooterTest.css';
-import { Button } from './Button';
-import { Link } from 'react-router-dom';
-import { logo } from '../assets';
-
-function FooterTest() {
-  return (
-    <div className='footer-container'>
-      <section className='footer-subscription'>
-        <img src={logo} alt='logo' className='w-13 h-12 object-contain' /> &nbsp;
-        <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-          Fresh & Clean Services &nbsp;
-        </p>
-      </section>
-      <div class='footer-links'>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
-            <h2>About Us</h2>
-            <Link to='/sign-up'>How it works</Link>
-            <Link to='/'>Testimonials</Link>
-            <Link to='/'>Careers</Link>
-            <Link to='/'>Investors</Link>
-            <Link to='/'>Terms of Service</Link>
-          </div>
-          <div class='footer-link-items'>
-            <h2>Contact Us</h2>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Support</Link>
-            <Link to='/'>Destinations</Link>
-            <Link to='/'>Sponsorships</Link>
-          </div>
-        </div>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
-            <h2>Videos</h2>
-            <Link to='/'>Submit Video</Link>
-            <Link to='/'>Ambassadors</Link>
-            <Link to='/'>Agency</Link>
-            <Link to='/'>Influencer</Link>
-          </div>
-          <div class='footer-link-items'>
-            <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
-          </div>
-        </div>
-      </div>
-      <section class='social-media'>
-        <div class='social-media-wrap'>
-          <div class='footer-logo'>
-            <Link to='/' className='social-logo'>
-              TRVL
-              <i class='fab fa-typo3' />
-            </Link>
-          </div>
-          <small class='website-rights'>TRVL © 2020</small>
-          <div class='social-icons'>
-            <Link
-              class='social-icon-link facebook'
-              to='/'
-              target='_blank'
-              aria-label='Facebook'
-            >
-              <i class='fab fa-facebook-f' />
-            </Link>
-            <Link
-              class='social-icon-link instagram'
-              to='/'
-              target='_blank'
-              aria-label='Instagram'
-            >
-              <i class='fab fa-instagram' />
-            </Link>
-            <Link
-              class='social-icon-link youtube'
-              to='/'
-              target='_blank'
-              aria-label='Youtube'
-            >
-              <i class='fab fa-youtube' />
-            </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='Twitter'
-            >
-              <i class='fab fa-twitter' />
-            </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <i class='fab fa-linkedin' />
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
-
-export default FooterTest;
- */

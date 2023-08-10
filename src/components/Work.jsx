@@ -1,55 +1,12 @@
-import { Tilt } from "react-tilt"
-import { motion } from "framer-motion"
 
+import { motion } from "framer-motion"
 import { styles } from "../styles"
-import { github } from "../assets"
 import { SectionWrapper } from "../hoc"
-import { projects } from "../constants"
 import { fadeIn, textVariant } from "../utils/motion"
 
 import React from "react";
 
-import ImageSlider from "./ImageSlider";
-import {
-  office1,
-} from "../assets";
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  slides,
-  source_code_link,
-}) => {
-  return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[420px] w-full'
-      >
-        <div className='relative w-full h-[230px]'>
-          <img
-            src={office1}
-            alt='project_image'
-            className='w-full h-full object-cover rounded-2xl'
-          />
-
-          
-        </div>
-
-        
-
-        
-      </Tilt>
-    </motion.div>
-  );
-};
 
 const Work = () => {
   return (
@@ -65,10 +22,10 @@ const Work = () => {
         Whiting, Chicago, Hammond, Griffith, Highland, Schererville, Merrillville, Munster, 
         Hobart, and Crown Point. You will be so happy with the work of the professional team 
         here at Fresh & Clean Services. 
-        Lorenzo has many years of janitorial services experience in Northwest Indiana. 
-        He has perfected cleaning techniques which he has passes on every day. 
-        You will see the difference when you hire a cleaning company who knows the right method, 
-        what product to use, and who has a team  member who is not afraid of using elbow grease.
+        Lorenzo has many years of janitorial services experience in Northwest Indiana and the Chicagoland Areas. 
+        He has perfected cleaning techniques which he has passed on to his team. 
+        You will see the difference when you hire a cleaning company: that knows the correct cleaning method, 
+        the right products to use, and has a team who is not afraid of using elbow grease.
         
         </motion.p>
        
@@ -77,14 +34,4 @@ const Work = () => {
   )
 };
 
-export default SectionWrapper(Work, "work");
-
-
-/**
- * You will be so happy with the work of the professional team here at Fresh & Clean Services. 
-          Lorenzo has many years of janitorial services experience in Northwest Indiana. 
-          He has perfected cleaning techniques which he has passes on every day. 
-          You will see the difference when you hire a cleaning company who knows the right method, 
-          what product to use, and who has a team  member who is not afraid of using elbow grease.
-        
- */
+export default SectionWrapper(Work, "");
