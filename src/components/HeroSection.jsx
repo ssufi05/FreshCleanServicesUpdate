@@ -2,9 +2,7 @@ import React from 'react';
 import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
-import { motion } from "framer-motion";
 
-// <video src='/videos/video-2.mp4' autoPlay loop muted />
 
 function HeroSection() {
   return (
