@@ -11,7 +11,7 @@ const ServiceCard = ({ index, title, icon }) => {
       <p className="w-full 
       green-pink-gradient p-[1px] rounded-[20px] shadow-card">
         <div
-        // Use this to change the color of the card and the size
+        // Use this to change the color and size of the cards
           options={{
             max: 45,
             scale: 1,
