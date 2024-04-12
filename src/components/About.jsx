@@ -1,6 +1,4 @@
 import React from 'react'
-import { Tilt } from 'react-tilt'
-import { motion } from 'framer-motion';
 
 import { styles } from '../styles';
 import { services } from '../constants';
@@ -9,10 +7,11 @@ import { SectionWrapper } from '../hoc';
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <Tilt className="xs:w-[250px] w-full">
+    <div className="xs:w-[225px] w-full">
       <p className="w-full 
       green-pink-gradient p-[1px] rounded-[20px] shadow-card">
         <div
+        // Use this to change the color of the card and the size
           options={{
             max: 45,
             scale: 1,
@@ -21,6 +20,7 @@ const ServiceCard = ({ index, title, icon }) => {
             className="bg-tertiary rounded-[20px]
             py-5 px-12 min-h-[280px] flex 
             justify-evenly items-center flex-col"
+            
         >
           <img src={icon} alt={title} 
           className="w-16 h-16 object-contain" />
@@ -28,7 +28,7 @@ const ServiceCard = ({ index, title, icon }) => {
           font-bold text-center">{title}</h3>
         </div>
       </p>
-    </Tilt>
+    </div>
   )
 }
 

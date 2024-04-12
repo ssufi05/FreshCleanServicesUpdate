@@ -88,7 +88,7 @@ function FooterTest() {
             <a href="#contact"> Contact </a>
           </p>
 
-          <p className="footer-company-name">Copyright © 2023 <strong>Fresh & Clean Services LLC </strong>
+          <p className="footer-company-name">Copyright © 2024 <strong>Fresh & Clean Services LLC </strong>
           All rights reserved</p>
         </div>
 
